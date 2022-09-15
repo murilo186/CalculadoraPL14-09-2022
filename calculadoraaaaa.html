@@ -1,0 +1,76 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="csdacal.css">
+            <title>calculadora</title>
+            <body>
+               
+            <section class="container">
+                <form name="form">
+               
+                    <div class="container">                      
+                            <input class="areadetxt" type="textarea" id="resultado" readonly>
+                            <input type="button" name="btnUm" value="=" onclick="resultar();">
+
+                    </div>
+    
+                    <div>
+                        
+                        <input type="button" name="btnUm" value="7" onclick="calcular('7');">
+                        <input type="button" name="btnDois" value="8" onclick="calcular('8');">
+                        <input type="button" name="btnUm" value="9" onclick="calcular('9');">
+                        <input type="button" name="btnUm" value="+" onclick="calcular('+');">
+                            
+                    </div>
+                    <div>
+                        <input type="button" name="btnUm" value="4" onclick="calcular('4');">
+                        <input type="button" name="btnDois" value="5" onclick="calcular('5');">
+                        <input type="button" name="btnUm" value="6" onclick="calcular('6');">
+                        <input type="button" name="btnUm" value="-" onclick="calcular('-');">
+                    </div>
+                    <div>
+                        <input type="button" name="btnUm" value="1" onclick="calcular('1');">
+                        <input type="button" name="btnDois" value="2" onclick="calcular('2');">
+                        <input type="button" name="btnUm" value="3" onclick="calcular('3');">
+                        <input type="button" name="btnUm" value="*" onclick="calcular('*');">
+                    </div>
+                     <div>
+                        <input type="button" value="C" onclick="apagar()">
+                        <input type="button" name="btnDois" value="0" onclick="calcular('0');">
+                        <input type="button" name="btnUm" value="," onclick="calcular(',');">
+                        <input type="button" name="btnUm" value="/" onclick="calcular('/');">
+                     </div>
+                     <div>
+
+                     </div>
+                </form>
+            </section>
+            </body>
+            
+            
+            
+            <script lang="Javascript">
+                 function  apagar()
+                {
+                    document.getElementById("resultado").value = "";
+                    
+                }
+ 
+
+                function calcular(value) 
+                   {
+                      document.getElementById("resultado").value += value;
+
+                }
+ 
+                   function resultar()
+                     {
+                         var p = document.getElementById("resultado").value;
+                         p
+                           var q = eval(p);
+                         document.getElementById("resultado").value = q;
+                      }
+                     
+            </script>
+        </head>
+    </html>
